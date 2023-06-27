@@ -42,6 +42,8 @@ shadow_mesh = SubResource("ArrayMesh_wwrak")
 points = PackedVector3Array(0.236, 0.0639937, 0.566, 0.212945, 0.271981, 0.516802, 0, 0.32, 0.516802, -0.236, 0.0639937, 0.566, 0.236, 0, 0.566, 0.236, 0.0639937, -0.566, 0.212945, 0.271981, -0.516913, 0, 0.32, -0.516913, -0.212991, 0.271981, 0.516802, -0.236, 0, 0.566, -0.236, 0.0639937, -0.566, 0.236, 0, -0.566, -0.212991, 0.271981, -0.516913, -0.236, 0, -0.566)
 
 [node name="gravestoneFlat" type="StaticBody3D"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneFlat2" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

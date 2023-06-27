@@ -70,6 +70,8 @@ points = PackedVector3Array(0.5, 0.8239, 0.50998, 0.5, -4.74538e-19, 0.50998, 0.
 
 [node name="brickWallEnd" type="StaticBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd2" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_h121x")

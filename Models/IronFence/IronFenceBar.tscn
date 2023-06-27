@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dl31b4pywxvjs"]
+[gd_scene load_steps=5 format=3 uid="uid://dl31b4pywxvjs"]
 
 [ext_resource type="Material" uid="uid://csmolge7ui80" path="res://Models/IronFence/metal.tres" id="1_ces70"]
 
@@ -38,17 +38,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_65ruy")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qn7m8"]
-points = PackedVector3Array(-0.0225, 0.663858, -0.0225, -0.0225, 0.663858, 0.0225, -1.86265e-09, 0.7339, -1.86265e-09, 0.0225, 0.663858, -0.0225, -0.0150029, 0, -0.0150029, 0.0225, 0.663858, 0.0225, -0.0150029, 0, 0.0149985, 0.0149985, 0, -0.0150029, 0.0149985, 0, 0.0149985)
-
-[node name="ironFenceBar" type="StaticBody3D"]
+[node name="ironFenceBar" type="Node3D"]
 
 [node name="ironFenceBar2" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_674or")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_ces70")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_qn7m8")

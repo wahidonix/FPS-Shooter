@@ -39,8 +39,7 @@ shadow_mesh = SubResource("ArrayMesh_s5cum")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3pgh"]
 albedo_color = Color(0.313726, 0.317647, 0.270588, 1)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rcq50"]
-points = PackedVector3Array(0.3752, 0.0335885, 0.526291, 0.282722, 0.39197, 0.439148, 0.335976, 0.0335885, 0.5656, 0.3752, 0, 0.526291, 0.3752, 0.0335885, -0.526402, 0.000440747, 0.531948, 0.439148, 0.282722, 0.39197, -0.439259, 0.335976, 0, 0.5656, -0.336049, 0.0335885, 0.5656, 0.3752, 0, -0.526402, 0.335976, 0.0335885, -0.5656, -0.282796, 0.39197, 0.439148, 0.000440747, 0.531948, -0.439259, -0.336049, 0, 0.5656, -0.3752, 0.0335885, 0.526291, 0.335976, 0, -0.5656, -0.336049, 0.0335885, -0.5656, -0.282796, 0.39197, -0.439259, -0.3752, 0, 0.526291, -0.3752, 0.0335885, -0.526402, -0.336049, 0, -0.5656, -0.3752, 0, -0.526402)
+[sub_resource type="BoxShape3D" id="BoxShape3D_h62ba"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bep04"]
 resource_name = "stone"
@@ -152,6 +151,8 @@ emission_enabled = true
 emission = Color(0.364706, 1, 0.333333, 1)
 
 [node name="crypt" type="StaticBody3D"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="crypt2" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
@@ -160,8 +161,8 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_v3pgh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_rcq50")
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 3.70372, 0.488055)
+shape = SubResource("BoxShape3D_h62ba")
 
 [node name="cryptSmallDoorwayAlternative" type="Node3D" parent="."]
 transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, 0, 0, 3.4)
